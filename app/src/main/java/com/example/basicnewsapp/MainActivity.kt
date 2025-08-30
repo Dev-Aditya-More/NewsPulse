@@ -19,9 +19,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BasicNewsAppTheme {
-
+                App()
             }
         }
     }
+}
+
+@Composable
+fun App(modifier: Modifier = Modifier) {
+
 }
 
