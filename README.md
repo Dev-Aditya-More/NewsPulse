@@ -22,6 +22,8 @@ MVVM architecture (Repository + ViewModel + UI)
 ### 📸 Screenshots
 
 
+<img src="Screenshot_20250904_011219.png" alt="Home Screen" width="250"/>
+
 ---
 
 ### 🛠 Tech Stack
