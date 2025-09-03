@@ -2,8 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.google.devtools.ksp") version "1.9.23-1.0.20"
-    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -43,12 +43,6 @@ android {
 
 dependencies {
 
-    // compose
-    implementation(libs.ui)
-    implementation(libs.material3)
-    implementation(libs.ui.tooling.preview)
-    debugImplementation(libs.ui.tooling)
-
     // Lifecycle
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
@@ -57,15 +51,23 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
 
+    implementation(libs.logging.interceptor)
+
     // Hilt (KSP only)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    implementation(libs.androidx.material3.adaptive.navigation.suite)
+
     // Hilt navigation for Compose
     implementation(libs.androidx.hilt.navigation.compose)
 
+    implementation(libs.coil.compose)
+
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.converter.gson)
 
     implementation(libs.androidx.navigation.compose)
 
