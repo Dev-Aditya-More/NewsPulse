@@ -1,4 +1,4 @@
-## 📰 Basic News App
+## 📰 NewsPulse
 
 A minimal news application built with Jetpack Compose, Hilt, Retrofit, and Coil.
 Fetches top headlines from NewsAPI
